@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-      ),
+      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -29,13 +27,22 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 1;
-
+  String _text = "Ganjil";
 
   void _incrementCounter() {
     setState(() {
       _counter++;
 
+      if (_counter > 10) {
+        _counter = 0;
+      }
 
+      _text = "Ganjil: ";
+      for (int i = 0; i < _counter; i++) {
+        if (i % 2 != 0) {
+          _text += '${i}, ';
+        }
+      }
     });
   }
 
@@ -55,6 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            Text(_text, style: Theme.of(context).textTheme.headlineMedium),
           ],
         ),
       ),
