@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-      ),
+      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -29,13 +27,30 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 1;
+  String _text = "Bilangan Prima: ";
 
+  bool _isprime(int number) {
+    if (number <= 1) return false;
+    for (int i = 2; i <= number ~/ 2; i++) {
+      if (number % i == 0) return false;
+    }
+    return true;
+  }
 
   void _incrementCounter() {
     setState(() {
       _counter++;
 
+      _text = "Bilangan Prima: ";
+      List<int> primes = [];
 
+      for (int i = 1; i <= _counter; i++) {
+        if (_isprime(i)) {
+          primes.add(i);
+        }
+      }
+
+      _text += primes.join(", ");
     });
   }
 
@@ -55,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            Text(_text, style: Theme.of(context).textTheme.bodyMedium),
           ],
         ),
       ),
