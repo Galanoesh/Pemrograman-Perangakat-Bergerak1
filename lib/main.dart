@@ -27,30 +27,18 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 1;
-  String _text = "Bilangan Prima: ";
-
-  bool _isprime(int number) {
-    if (number <= 1) return false;
-    for (int i = 2; i <= number ~/ 2; i++) {
-      if (number % i == 0) return false;
-    }
-    return true;
-  }
+  String _text = "Genap: ";
 
   void _incrementCounter() {
     setState(() {
       _counter++;
 
-      _text = "Bilangan Prima: ";
-      List<int> primes = [];
-
-      for (int i = 1; i <= _counter; i++) {
-        if (_isprime(i)) {
-          primes.add(i);
+      _text = "Genap: ";
+      for (int i = 0; i < _counter; i++) {
+        if (i % 2 == 0) {
+          _text += '${i}, ';
         }
       }
-
-      _text += primes.join(", ");
     });
   }
 
