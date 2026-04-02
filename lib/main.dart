@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,74 +11,86 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      title: 'Contact',
+      theme: ThemeData(),
+      home: const DetailScreen(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 1;
-  String _text = "Bilangan Prima: ";
-
-  bool _isprime(int number) {
-    if (number <= 1) return false;
-    for (int i = 2; i <= number ~/ 2; i++) {
-      if (number % i == 0) return false;
-    }
-    return true;
-  }
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-
-      _text = "Bilangan Prima: ";
-      List<int> primes = [];
-
-      for (int i = 1; i <= _counter; i++) {
-        if (_isprime(i)) {
-          primes.add(i);
-        }
-      }
-
-      _text += primes.join(", ");
-    });
-  }
+class DetailScreen extends StatelessWidget {
+  const DetailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
+      body: SafeArea(
         child: Column(
-          mainAxisAlignment: .center,
-          children: [
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Image.asset('asset/images/submarine.jpg'),
+            Container(
+              margin: const EdgeInsets.only(top: 16.0),
+              child: Text(
+                'Surabaya Submarine Monument',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.lobster(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
-            Text(_text, style: Theme.of(context).textTheme.headlineMedium),
+            Container(
+              margin: const EdgeInsets.only(top: 16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Column(
+                    children: const <Widget>[
+                      Icon(Icons.calendar_today),
+                      SizedBox(height: 8.0),
+                      Text('Open Everyday'),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(16.0),
+              child: Text(
+                'Museum inside a decommissioned Russian war submarine with tours & an adjacent park with cafes. Clean and well maintained. Car park cost 10k, entrance fee 15k/person. You can see KRI Pasopati there, it is a russian whiskey class. You can also watch the video about the Indonesian Navy at the building beside the submarine.',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.oxygen(fontSize: 16.0),
+              ),
+            ),
+            Container(
+              height: 150.0,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: Image.network(
+                      'https://media-cdn.tripadvisor.com/media/photo-m/1280/16/a9/33/43/liburan-di-farmhouse.jpg',
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: Image.asset('asset/images/monkasel1.jpg'),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: Image.asset('asset/images/monkasel2.jpg'),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: Image.asset('asset/images/monkasel3.jpg'),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
