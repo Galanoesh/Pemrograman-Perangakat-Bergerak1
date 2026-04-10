@@ -67,21 +67,34 @@ class DetailScreen extends StatelessWidget {
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.all(4.0),
-                    child: Image.network(
-                      'https://media-cdn.tripadvisor.com/media/photo-m/1280/16/a9/33/43/liburan-di-farmhouse.jpg',
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20.0),
+                      child: Image.network(
+                        'https://media-cdn.tripadvisor.com/media/photo-m/1280/16/a9/33/43/liburan-di-farmhouse.jpg',
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(4.0),
-                    child: Image.asset('asset/images/monkasel1.jpg'),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20.0),
+                      child: Image.asset('asset/images/monkasel1.jpg'),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(4.0),
-                    child: Image.asset('asset/images/monkasel2.jpg'),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20.0),
+                      child: Image.asset('asset/images/monkasel2.jpg'),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(4.0),
-                    child: Image.asset('asset/images/monkasel3.jpg'),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20.0),
+                      child: Image.asset('asset/images/monkasel3.jpg'),
+                    ),
                   ),
                 ],
               ),
