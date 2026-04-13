@@ -32,8 +32,23 @@ var tourismPlaceList = [
     imageAsset: 'asset/images/pahlawan.jpg',
   ),
   TourismPlace(
-    name: 'Kebun Binatang Surabaya',
-    location: 'Wonokromo',
-    imageAsset: 'asset/images/sby.jpg',
+    name: 'Surabaya North Quay',
+    location: 'Jl. Jamrud Utara',
+    imageAsset: 'asset/images/quay.jpg',
+  ),
+  TourismPlace(
+    name: 'Wisata Perahu Kalimas',
+    location: 'Jl. Pemuda',
+    imageAsset: 'asset/images/perahu.jpg',
+  ),
+  TourismPlace(
+    name: 'Kota Lama Surabaya',
+    location: 'JL. Rajawali',
+    imageAsset: 'asset/images/kotalama.jpg',
+  ),
+  TourismPlace(
+    name: 'Hutan Bambu',
+    location: 'Keputih',
+    imageAsset: 'asset/images/hutan.jpg',
   ),
 ];

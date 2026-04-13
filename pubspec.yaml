@@ -67,6 +67,15 @@ flutter:
     - asset/images/sampoerna.jpg
     - asset/images/pahlawan.jpg
     - asset/images/sby.jpg
+    - asset/images/quay.jpg
+    - asset/images/hutan.jpg
+    - asset/images/kotalama.jpg
+    - asset/images/perahu.jpg
+    # - asset/images/pahlawan.jpg
+    # - asset/images/sby.jpg
+    # - asset/images/sampoerna.jpg
+    # - asset/images/pahlawan.jpg
+    # - asset/images/sby.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
