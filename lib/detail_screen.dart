@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'tourism_place.dart';
 
 class DetailScreen extends StatelessWidget {
-  const DetailScreen({super.key});
+  final TourismPlace place;
+
+  const DetailScreen({super.key, required this.place});
 
   @override
   Widget build(BuildContext context) {
@@ -11,11 +14,11 @@ class DetailScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Image.asset('asset/images/submarine.jpg'),
+            Image.asset(place.imageAsset),
             Container(
               margin: const EdgeInsets.only(top: 16.0),
               child: Text(
-                'Surabaya Submarine Monument',
+                place.name,
                 textAlign: TextAlign.center,
                 style: GoogleFonts.lobster(
                   fontSize: 30,

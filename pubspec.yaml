@@ -63,6 +63,10 @@ flutter:
     - asset/images/monkasel1.jpg
     - asset/images/monkasel2.jpg
     - asset/images/monkasel3.jpg
+    - asset/images/klenteng.jpg
+    - asset/images/sampoerna.jpg
+    - asset/images/pahlawan.jpg
+    - asset/images/sby.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
