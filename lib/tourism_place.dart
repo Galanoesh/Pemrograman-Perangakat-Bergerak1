@@ -86,6 +86,22 @@ var tourismPlaceList = [
     ],
   ),
   TourismPlace(
+    name: 'patung suroboyo',
+    location: 'Wonokromo',
+    imageAsset: 'asset/images/sby.jpg',
+    description:
+        'Patung Suroboyo adalah sebuah patung yang terletak di Wonokromo, Surabaya, Indonesia. Patung ini merupakan simbol kebanggaan masyarakat Surabaya dan menggambarkan seorang pahlawan yang berjuang untuk kemerdekaan Indonesia. Patung Suroboyo memiliki bentuk yang megah dan menjadi salah satu ikon kota Surabaya.',
+    openDays: 'Setiap Hari',
+    openTime: '24 Jam',
+    ticketPrice: 'Gratis',
+    ImageAssets: [
+      'https://media-cdn.tripadvisor.com/media/photo-m/1280/16/a9/33/43/liburan-di-farmhouse.jpg',
+      'asset/images/monkasel1.jpg',
+      'asset/images/monkasel2.jpg',
+      'asset/images/monkasel3.jpg',
+    ],
+  ),
+  TourismPlace(
     name: 'Surabaya North Quay',
     location: 'Jl. Jamrud Utara',
     imageAsset: 'asset/images/quay.jpg',
