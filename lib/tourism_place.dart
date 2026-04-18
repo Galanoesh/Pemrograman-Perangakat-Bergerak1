@@ -32,6 +32,11 @@ var tourismPlaceList = [
     imageAsset: 'asset/images/pahlawan.jpg',
   ),
   TourismPlace(
+    name: 'Patung suroboyo',
+    location: 'Wonokromo',
+    imageAsset: 'asset/images/sby.jpg',
+  ),
+  TourismPlace(
     name: 'Surabaya North Quay',
     location: 'Jl. Jamrud Utara',
     imageAsset: 'asset/images/quay.jpg',
